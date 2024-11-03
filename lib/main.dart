@@ -219,31 +219,35 @@ class _ProductPageState extends State<ProductPage> {
             },
             child: Card(
               margin: const EdgeInsets.all(10),
-              child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Image.network(
-                      product['imageUrl'],
-                      height: 400,
-                      width: double.infinity,
-                      fit: BoxFit.cover,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.network(
+                    product['imageUrl'],
+                    height: 200, // ลดความสูงลงเล็กน้อยเพื่อป้องกันการล้น
+                    width: double.infinity,
+                    fit: BoxFit.cover,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          product['name'],
+                          style: GoogleFonts.fredoka(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(height: 5),
+                        Text(
+                          'Price: ${product['price']}',
+                          style: GoogleFonts.fredoka(
+                              fontSize: 16, color: Colors.grey[700]),
+                        ),
+                      ],
                     ),
-                    const SizedBox(height: 10),
-                    Text(
-                      product['name'],
-                      style: GoogleFonts.fredoka(
-                          fontSize: 20, fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(height: 5),
-                    Text(
-                      'Price: ${product['price']}',
-                      style: GoogleFonts.fredoka(
-                          fontSize: 16, color: Colors.grey[700]),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           );
@@ -265,34 +269,37 @@ class ProductDetailPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(product['name']),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Image.network(
-              product['imageUrl'],
-              height: 400,
-              width: double.infinity,
-              fit: BoxFit.cover,
-            ),
-            const SizedBox(height: 20),
-            Text(
-              product['name'],
-              style: GoogleFonts.fredoka(
-                  fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              'Price: ${product['price']}',
-              style: GoogleFonts.fredoka(fontSize: 20, color: Colors.grey[700]),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              'Description: ${product['description']}',
-              style: GoogleFonts.fredoka(fontSize: 16),
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.network(
+                product['imageUrl'],
+                height: 300,
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ),
+              const SizedBox(height: 20),
+              Text(
+                product['name'],
+                style: GoogleFonts.fredoka(
+                    fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 10),
+              Text(
+                'Price: ${product['price']}',
+                style:
+                    GoogleFonts.fredoka(fontSize: 20, color: Colors.grey[700]),
+              ),
+              const SizedBox(height: 10),
+              Text(
+                'Description: ${product['description']}',
+                style: GoogleFonts.fredoka(fontSize: 16),
+              ),
+            ],
+          ),
         ),
       ),
     );
