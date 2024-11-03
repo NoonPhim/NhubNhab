@@ -1,0 +1,41 @@
+[
+  {
+    "name": "อ่านชะตาวันสิ้นโลก",
+    "imageUrl": "https://i.pinimg.com/564x/33/d2/9c/33d29ccca8d579e418dd6eb9f939748a.jpg",
+    "category": "แฟนตาซี",
+    "price": "234 บาท",
+    "description": ""
+  },
+
+  {
+    "name": "เป็นตัวร้ายก็ต้องตายเท่านั้น",
+    "imageUrl": "https://i.pinimg.com/564x/d6/38/1e/d6381ece5d3f31a9245dfac02a800538.jpg",
+    "category": "ดรามา",
+    "price": "256 บาท",
+    "description": ""
+  },
+
+  {
+    "name": "Beware The Villainess",
+    "imageUrl": "https://i.pinimg.com/564x/78/ff/08/78ff0852011a86ca23a5283fb9875dc3.jpg",
+    "category": "โรแมนติก",
+    "price": "350 บาท",
+    "description": ""
+  },
+
+  {
+    "name": "อ่านชะตาวันสิ้นโลก",
+    "imageUrl": "https://i.pinimg.com/564x/33/d2/9c/33d29ccca8d579e418dd6eb9f939748a.jpg",
+    "category": "Y/N",
+    "price": "234 บาท",
+    "description": "เกกกกกกกกกก"
+  },
+
+  {
+    "name": "Beware The Villainess",
+    "imageUrl": "https://i.pinimg.com/564x/78/ff/08/78ff0852011a86ca23a5283fb9875dc3.jpg",
+    "category": "ตลก",
+    "price": "350 บาท",
+    "description": ""
+  }
+]
